@@ -1,0 +1,70 @@
+extends layout
+
+block body
+
+  .dashboard
+            p.right <strong>Office:</strong> (843) 633-1032</><br><strong>Pet Sitting:</strong> (843) 408-1033
+
+    .row
+      .col-lg-12
+        .jumbotron
+          h2 Your Information
+          .hr.dot.br          
+          p2 Email:  <span class="data">#{user.email}</span><br>
+          //- var birthday = (user.custom_data.birthday ?  user.custom_data.birthday : "You haven't entered a birthday yet!");
+          //- var fname = (user.custom_data.fname ?  user.custom_data.fname : "You haven't entered a first name yet!");
+          //- var lname = (user.custom_data.lname ?  user.custom_data.lname : "You haven't entered a last name yet!");
+          //- var pet1 = (user.custom_data.pet1 ?  user.custom_data.pet1 : "You haven't entered a pet yet!");
+          //- var pet2 = user.custom_data.pet2 ?;
+          //- var pet3 = user.custom_data.pet3 ?;
+          
+          p2 Birthday:  <span class="data">#{birthday}</span><br>
+          p2 First Name:  <span class="data">#{fname}</span><br>
+          p2 Last Name:  <span class="data">#{lname}</span><br>
+          p2 Pet-1:  <span class="data">#{pet1}</span><br>
+          p2 Pet-2:  <span class="data">#{pet2}</span><br>
+          p2 Pet-3:  <span class="data">#{pet3}</span><br>
+
+          br
+          h2 Update
+          .hr.dot.br          
+          p2
+           form.bs-example.form-horizontal(method='post', action='')
+            .form-group
+              label.col-lg-2.control-label(for='fname') First Name
+              .col-lg-4
+                input#fname.form-control(type='text', name='fname', placeholder='first name')
+            
+            .form-group
+              label.col-lg-2.control-label(for='lname') Last Name
+              .col-lg-4
+                input#lname.form-control(type='text', name='lname', placeholder='last name')
+
+            .form-group
+              label.col-lg-2.control-label(for='birthday') Birthday
+              .col-lg-4
+                input#birthday.form-control(type='text', name='birthday', placeholder='mm/dd/yyyy')
+            
+            .form-group
+              label.col-lg-2.control-label(for='pet1') Pet #1
+              .col-lg-4
+                input#pet1.form-control(type='text', name='pet1', placeholder='first pet')
+            
+            .form-group
+              label.col-lg-2.control-label(for='pet2') Pet #2
+              .col-lg-4
+                input#pet2.form-control(type='text', name='pet2', placeholder='second pet')
+            
+            .form-group
+              label.col-lg-2.control-label(for='pet3') Pet #3
+              .col-lg-4
+                input#pet3.form-control(type='text', name='pet3', placeholder='third pet')
+            
+            .form-group
+              .col-lg-10.col-lg-offset-2
+                button.btn.btn-primary(type='submit') Update
+                
+                
+        include footer.jade
+        div &nbsp
+        div &nbsp

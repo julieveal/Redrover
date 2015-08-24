@@ -1,0 +1,28 @@
+extends layout
+
+block body
+
+  #welcome.jumbotron
+    <img src='img/logo-stacked.lg.jpg' width='60%'>
+   
+    h1 Send My Sitter Right Over
+      <br/>
+    p.lead Welcome to RedRover-RedRover Pet Sitting Service.<br>We provide individualized care, safety, love and affection <br>while you are away, as we would for our own pets, providing you peace of mind.<br>
+      
+
+    h6 Please Login or register for an account.
+    .bigbutton
+      a.bigbutton.btn.btn-lg.btn-danger(href='/register', role='button') Register
+
+    .row
+    .hr.dot
+    
+      .col-xs-6.col-sm-4.img-responsive<br><br><img src="img/cat.jpg" alt="cat sitting" class="img-circle"><br> <button type="button" class="btn btn-link"><h2 class="red">Cat Sitting</h3></button><br><br>
+      .col-xs-6.col-sm-4.img-responsive<br><br><img src="img/small-dog.jpg" alt="dog walking" class="img-circle"><br> <button type="button" class="btn btn-link"><h2 class="red">Dog Walking</h3></button><br><br>
+      .col-xs-6.col-sm-4.img-responsive<br><br><img src="img/sit.jpg" alt="pet sitting" class="img-circle"><br> <button type="button" class="btn btn-link"><h2 class="red">Pet Sitting</h3></button><br><br>
+
+    p.lead Ask us about our ad on pet services including; extra time, extra exercises, in-home nail trim, in-home bathing, Facetime, grooming services, or pet food and supplies shopping.<br><br>
+    .hr.dot  
+  include footer.jade
+  div &nbsp;
+  div &nbsp;
